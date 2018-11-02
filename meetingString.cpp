@@ -65,7 +65,7 @@ int numberOfRooms(vector<string>& meetings){
     priority_queue<int, vector<int>, greater<int>> rooms;
 
     for(int i=0; i<meetings.size(); ++i){
-    auto tmp = interpret(meetings[i]);
+        auto tmp = interpret(meetings[i]);
         times[i].start = tmp.start;
         times[i].end = tmp.end;
         cout<<times[i].start<<" "<<times[i].end<<endl;

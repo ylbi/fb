@@ -17,7 +17,9 @@ bool isOrdered(vector<string>& wordlist, string order){
         for(int i=0; i<min(len1, len2); ++i){
             if(str1[i]==str2[i]) continue;
             else{
-                if(order[str1[i]]<order[str2[i]]) return true;
+                //要思考万一字符不在order里面怎么办
+                if(order.find(str1[i])!=order.end() && order.find(str2[i])!=order.end() 
+                && order[str1[i]]<order[str2[i]]) return true;
                 else return false;
             }
         }
